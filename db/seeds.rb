@@ -5,3 +5,5 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+j1 = Entry.create(title: "how im feeling today", content: "theres alot to talk about")
+j2 = Entry.create(title: "Weird things", content: "Turtles everywhere")
