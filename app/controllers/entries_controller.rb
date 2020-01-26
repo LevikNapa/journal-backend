@@ -1,5 +1,5 @@
 class EntriesController < ApplicationController
-  
+
   def index
     @entries = Entry.all
     render json: @entries
@@ -19,9 +19,17 @@ class EntriesController < ApplicationController
     render json: @entry
   end
 
+  def update
+    @entry = Entry.find(params[:id])
+    @entry.update(content: params[:entry][:content])
+    @entry.save
+    render json: @entry
+  end
+
   def destroy
     @entry = Entry.find(params[:id])
-    @entry.destroy
+    @entry.delete
+    render json: @entry
   end
 
   private
